@@ -9,6 +9,7 @@ import random
 
 # Genero una lista con 10 numeros enteros, rango de 1 a 10 incluidos los extremos
 notas = []
+suma = 0
 mas_alta, mas_baja = 0, 10
 for i in range(10):
     notas.append(random.randint(1, 10))
@@ -16,10 +17,16 @@ for i in range(10):
 # Muestro la lista mientras proceso cual es mas alta y mas baja:
 for i in range(len(notas)):
     print(f"Nota {i+1}: {notas[i]}")
+    suma += notas[i]
     if notas[i] < mas_baja:
         mas_baja = notas[i]
     if notas[i] > mas_alta:
         mas_alta = notas[i]
+
+
+# imprimo el promedio
+print(f"\nPromedio: {suma/len(notas)} \n")
+
 
 # imprimo la mas alta y la mas baja
 print(f"Nota más alta: {mas_alta} \n"
