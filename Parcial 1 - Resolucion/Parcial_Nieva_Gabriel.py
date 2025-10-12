@@ -74,7 +74,7 @@ while op != "8":
     # Se muestra el menú en cada ejecución del ciclo para que el usuario pueda leer las opciones cada vez que se ejecuta
     print(f'\n{separador}'
         f'\n==================== MENÚ PRINCIPAL ============================='
-        f'\n================================================================='
+        f'\n{separador}'
         f'\n1- Ingresar títulos'
         f'\n2- Ingresar ejemplares'
         f'\n3- Mostrar catálogo'
