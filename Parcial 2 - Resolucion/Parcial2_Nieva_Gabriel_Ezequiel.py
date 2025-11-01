@@ -50,6 +50,7 @@ def ingresar_titulos():
     # Para evitar duplicados me di cuenta que debo verificar tanto en la lista en memoria como en el csv
     # Acá lo que hago es crear una lista con lo que ya esté en el archivo, si es que tiene algo
     titulos_existentes = []
+    # Verifico que exista por si fue eliminado mientras se ejecuta el script
     if os.path.exists("catalogo.csv"):
         with open("catalogo.csv", "r") as archivo:
             lineas = archivo.readlines()
@@ -161,6 +162,7 @@ def listar_mostrar_libros():
         return []
 
     print("\n--- LISTA DE LIBROS ---")
+    # Uso start = 1 para uqe no incluya la cabecera
     for i, libro in enumerate(libros, start=1):
         print(f"{i}. {libro['titulo']} (Stock: {libro['cantidad']})")
 
