@@ -114,7 +114,7 @@ unos (1), en base 2.
 
 def decimal_binario_recursivo(n):
     # Caso base
-    if n == 0:
+    if n < 2:
         return ""
 
     # Llamada recursiva
